@@ -35,9 +35,6 @@ class users(db.Model):
 
 @app.route('/', methods = ["GET", "POST"])
 def home():
-    if ('name' in session) and (session['name'] == params['admin_name']):
-        users_ = users.query.all()
-        return render_template("navbar.html", users_ = users_)
     if request.method == "POST":
         name = request.form.get('name')
         rollnumber = request.form.get('rollnumber')
