@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>Users logs</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="icon" href="{{url_for('static', filename = 'login_img.jpg')}}">
+<link rel="stylesheet" href="/static/style.css">
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav>
+    <div class="logo">Users</div>
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+    <i class="fas fa-bars"></i>
+    </label>
+    
+    <ul>
+    <li><a href="/rollout">Rollout</a></li>
+    <li><a href="/calculator">Calculator</a></li>
+    </ul>
+    </nav>
+
+    <div class="container">
+        <div class="jumbotron">
+            <div class="card">
+                <h5 class="card-header">Fetching from database </h5>
+                <table class="table table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Roll Number</th>
+                        <th scope="col">Date of Join</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        {% for user in users_%}
+                        <th scope="row">{{user.sno}}</th>
+                        <td>{{user.name}}</td>
+                        <td>{{user.rollnumber}}</td>
+                        <td>{{user.date}}</td>
+                      </tr>
+                      {% endfor %}
+                      
+                    </tbody>
+                  </table>     
+                             
+                </div>
+              </div>
+
+
+
+        </div>
+    </div>
+
+    <style>
+        body {
+          background-image: url('/static/background.jpg');
+        }
+        </style>
+
+</body>
+</html>

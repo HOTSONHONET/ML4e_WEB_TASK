@@ -1,0 +1,49 @@
+.container{
+    text-align : center;
+    margin:23px;
+}
+body{
+    background-image: url('background.jpg');
+}
+
+table{
+    margin: auto;
+    margin-top: 10px;
+}
+
+input{
+    font-size: 37px;
+    border: 2px solid black;
+    border-radius: 22px;
+    width: auto;
+    height: 75px;
+}
+
+button{
+    border-radius: 20px;
+    font-size: 40px;
+    background: crimson;
+    width: 107px;
+    height: 64px;
+    font-family: cursive;
+}
+
+.calculator{
+    border: 8px solid black;
+    background-color: darkgrey;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+#operation{
+    background-color: slateblue;
+}
+
+#result{
+    background-color: darkolivegreen;
+}
+
+h1{
+    font-size: 32px;
+}
