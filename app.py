@@ -14,7 +14,7 @@ app.secret_key = '1'
 
 
 # app.config["SQLALCHEMY_DATABASE_URI"] = params['local_uri']
-app.config["DATABASE_URL"] = params['prod_uri']   
+app.config["SQLALCHEMY_DATABASE_URI"] = params['prod_uri']   
 
 db = SQLAlchemy(app)
 class users(db.Model):
