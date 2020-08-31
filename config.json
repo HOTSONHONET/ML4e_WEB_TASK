@@ -1,6 +1,6 @@
 {
     "params": {
-        "local_server":"True",
+        "local_server":"False",
         "admin_name": "Rudra Prasad Dash",
         "admin_rollnumber": "118BM0003",
         "login_img" : "login_img.jpg",
