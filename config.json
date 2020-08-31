@@ -5,6 +5,6 @@
         "login_img" : "login_img.jpg",
         "session" :"2020-21",
         "local_uri":"postgresql://postgres:Hotson@1412@localhost/calculator_users",
-        "prod_uri":"postgres://rxfzzvqtnoonhd:5ba08b9578a778870a1ce984db767f71570204a1f31d4b8f5f3a5695f6be8de6@ec2-54-158-122-162.compute-1.amazonaws.com:5432/d2n65hv8l1bco"
+        "prod_uri":"postgres://rxfzzvqtnoonhd:5ba08b9578a778870a1ce984db767f71570204a1f31d4b8f5f3a5695f6be8de6@ec2-54-158-122-162.compute-1.amazonaws.com:5432/d2n65hv8l1bco?sslmode=require"
     }
 }

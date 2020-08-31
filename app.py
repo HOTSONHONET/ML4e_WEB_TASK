@@ -18,6 +18,7 @@ app.config["DATABASE_URL"] = params['prod_uri']
 
 db = SQLAlchemy(app)
 class users(db.Model):
+    __tablename__ = "Userlogs"
     sno = db.Column(db.INTEGER, primary_key = True)
     name = db.Column(db.String(50), nullable = False)
     rollnumber = db.Column(db.String(120), nullable = False)
