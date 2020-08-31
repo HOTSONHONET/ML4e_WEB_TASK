@@ -8,14 +8,15 @@ from sqlalchemy import exc
 with open("config.json", 'r') as file:
     params = json.load(file)['params']
 
-local_server = params['local_server']
+
 app = Flask(__name__)
 app.secret_key = '1'
 
+local_server = params['local_server']
 if local_server:
     app.config["SQLALCHEMY_DATABASE_URI"] = params['local_uri']
 else:
-    app.config["SQLALCHEMY_DATABASE_URI"] = params['prod_uri']   
+    app.config["DATABASE_URL"] = params['prod_uri']   
 
 db = SQLAlchemy(app)
 class users(db.Model):
